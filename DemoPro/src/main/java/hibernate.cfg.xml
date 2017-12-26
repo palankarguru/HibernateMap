@@ -1,0 +1,98 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<!-- Assume test is the database name -->
+
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/student</property>
+
+		<property name="hibernate.connection.username">root</property>
+
+		<property name="hibernate.connection.password">root</property>
+		<property name="show_sql">true</property>
+
+		<property name="hbm2ddl.auto">create-drop</property>
+
+		<!-- List of XML mapping files class -->
+
+		<!-- Many to Many Bi-Direction -->
+
+	 	 <!-- <mapping class="com.Map.ManytoMany.BookMTM_JCB" /> --> 
+		 <!--  <mapping class="com.Map.ManytoMany.AuthorMTM_JCB" /> --> 
+		 <!-- <mapping class="com.Map.ManytoMany.BookMTM_JTB" /> -->
+		 <!-- <mapping class="com.Map.ManytoMany.AuthorMTM_JTB" /> --> 
+		<!--  <mapping class="com.Map.ManytoMany.BookMTM_PB" /> --> 
+		  <!-- <mapping class="com.Map.ManytoMany.AuthorMTM_PB" /> -->
+
+		<!-- Many to Many Uni-Direction -->
+
+		<!-- <mapping class="com.Map.ManytoMany.DepartmentMTM_JCU" /> --> 
+		<!-- <mapping class="com.Map.ManytoMany.CompanyMTM_JCU" /> -->
+		<mapping class="com.Map.ManytoMany.DepartmentMTM_JTU" /> 
+		 <mapping class="com.Map.ManytoMany.CompanyMTM_JTU" /> 
+		<!-- <mapping class="com.Map.ManytoMany.DepartmentMTM_PKU" /> -->
+		<!-- <mapping class="com.Map.ManytoMany.CompanyMTM_PKU" /> -->
+
+		<!-- Many to One Bi Direction -->
+		<!-- <mapping class="com.Map.ManytoOne.CompanyMTO_JCB" /> --> 
+		 <!-- <mapping class="com.Map.ManytoOne.DepartmentMTO_JCB"/> -->
+		<!--  <mapping class="com.Map.ManytoOne.CompanyMTO_JTB"/> --> 
+		 <!-- <mapping class="com.Map.ManytoOne.DepartmentMTO_JTB"/> -->
+		<!-- <mapping class="com.Map.ManytoOne.CompanyMTO_PKB" /> --> 
+		<!--  <mapping class="com.Map.ManytoOne.DepartmentMTO_PKB" /> --> 
+
+		<!-- Many to One Uni Direction -->
+		<!-- <mapping class="com.Map.ManytoOne.DepartmentMTO_JCU" /> --> 
+		<!--  <mapping class="com.Map.ManytoOne.CompanyMTO_JCU"/> -->
+		<!-- <mapping class="com.Map.ManytoOne.DepartmentMTO_JTU"/> --> 
+		<!-- <mapping class="com.Map.ManytoOne.CompanyMTO_JTU"/> -->
+		<!-- <mapping class="com.Map.ManytoOne.CompanyMTO_PKU" /> --> 
+		 <!-- <mapping class="com.Map.ManytoOne.DepartmentMTO_PKU" /> --> 
+
+		<!-- One to Many Uni Direction -->
+		<!-- <mapping class="com.Map.OnetoMany.CompanyOTM_PKU"/> --> 
+		 <!-- <mapping class="com.Map.OnetoMany.DepartmentOTM_PKU"/> -->
+		<!-- <mapping class="com.Map.OnetoMany.DepartmentOTM_JTU" /> -->
+		<!-- <mapping class="com.Map.OnetoMany.CompanyOTM_JTU" /> --> 
+		<!-- <mapping class="com.Map.OnetoMany.DepartmentOTM_JCU"/> --> 
+		 <!-- <mapping class="com.Map.OnetoMany.CompanyOTM_JCU"/> -->
+
+		<!-- One to Many Bi-Direction -->
+		<!-- <mapping class="com.Map.OnetoMany.CompanyOTM_PKB" /> --> 
+		<!--  <mapping class="com.Map.OnetoMany.DepartmentOTM_PKB" /> --> 
+		<!-- <mapping class="com.Map.OnetoMany.DepartmentOTM_JCB" /> --> 
+		<!-- <mapping class="com.Map.OnetoMany.CompanyOTM_JCB"/> --> 
+		<!-- <mapping class="com.Map.OnetoMany.DepartmentOTM_JTB" /> --> 
+	<!-- 	 <mapping class="com.Map.OnetoMany.CompanyOTM_JTB" /> --> 
+
+		<!-- One to One Bi-Direction -->
+		<!-- <mapping class="com.Map.OnetoOne.NewAddress"/> --> 
+		 <!-- <mapping class="com.Map.OnetoOne.Emp"/> -->
+		<!-- <mapping class="com.Map.OnetoOne.Cus" /> -->
+		<!-- <mapping class="com.Map.OnetoOne.Ven" /> -->
+		<!-- <mapping class="com.Map.OnetoOne.Sub" /> -->
+		<!-- <mapping class="com.Map.OnetoOne.Book" /> -->
+
+		<!-- One to One Uni Direction -->
+		<!-- <mapping class="com.Map.OnetoOne.Bike1" /> -->
+		<!-- <mapping class="com.Map.OnetoOne.Vehicle"/> -->
+		<!-- <mapping class="com.Map.OnetoOne.Address"/> -->
+		<!-- <mapping class="com.Map.OnetoOne.Com"/> -->
+		<!-- <mapping class="com.Map.OnetoOne.Bike" /> -->
+		<!-- <mapping class="com.Map.OnetoOne.Car" /> -->
+
+		<!-- <mapping class="com.Hibernate.StudentPojo" /> -->
+		<!-- <mapping class="com.Hibernate.Subject" /> -->
+		<!-- <mapping class="com.Hibernate.Books" /> -->
+		<!-- <mapping class="com.Map.OnetoOne.Vehicle"/> -->
+		<!-- <mapping class="com.Map.OnetoOne.Bike1" /> -->
+
+	</session-factory>
+</hibernate-configuration>
